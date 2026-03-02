@@ -24,6 +24,16 @@ const int FACT[] = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880}; // 0~9的阶
 priority_queue<int, vector<int>> he;                                // 默认是less，即数字大的优先级高
 priority_queue<int, vector<int>, greater<int>> hE;                  // 数字小的优先级高
 
+int gcd(int a, int b) {
+    return b ? gcd(b, a % b) : a;
+}
+
+int lcm(int a, int b, int c) { // 三个数的最小公倍数
+    int m1 = a / gcd(a, b) * b;
+    int m2 = b / gcd(b, c) * c;
+    return m1 / gcd(m1, m2) * m2;
+}
+
 void clear(queue<int> &q) { // 清空队列
     queue<int> empty;
     swap(empty, q);
