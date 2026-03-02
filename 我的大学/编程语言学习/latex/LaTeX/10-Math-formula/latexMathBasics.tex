@@ -1,0 +1,112 @@
+% 导言区
+\documentclass{ctexart}
+
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{lmodern}
+
+% 正文区
+\begin{document}
+    \section{简介}
+    \LaTeX{} 将排版内容分为文本模式和数学模式。文本模式用于普通文本排版，数学模式用于数学公式排版
+    \section{行内公式}
+    \subsection{美元符号}
+    交换律是 $a+b=b+a$，如$1+2=2+1$
+    \subsection{小括号}
+    交换律是 \(a+b=b+a\)，如\(1+2=2+1\)
+    \subsection{math环境}
+    交换律是 \begin{math}a+b=b+a\end{math}，如\begin{math}1+2=2+1\end{math}
+
+    \section{上下标}
+    \subsection{上标}
+    $3x^2 - x + 2 = 0$
+    $3x^{20} - x + 2 = 0$
+    \subsection{下标}
+    $3x_2 - x + 2 = 0$
+
+    \section{希腊字母}
+    $\alpha$
+    $\beta$
+    $\gamma$
+    $\epsilon$
+    $\pi$
+    $\omega$
+
+    $\Gamma$
+    $\Delta$
+    $\Theta$
+    $\Pi$
+    $\Omega$
+
+    $\alpha^3 + \beta^2 + \gamma = 0$
+
+    \section{数学函数}
+    $\log$
+    $\sin$
+    $\cos$
+    $\arcsin$
+    $\arccos$
+    $\ln$
+
+    $\sin^2 x + \cos^2 x = 1$
+    $y = \arcsin x$
+    
+    $y = \sin^{-1} x$
+    $y = \log_2 x$
+    $y = \ln x$
+
+    $\sqrt{2}$
+    $\sqrt{x^2 + y^2}$
+    $\sqrt{2 + \sqrt{2}}$
+    $\sqrt[4]{x}$
+
+    \section{分式}
+    大约是原体积的$3/4$
+    大约是原体积的$\frac{3}{4}$
+
+    $\frac{x}{x^2 + x + 1$
+    $\frac{\sqrt{x-1}}{\sqrt{x+1}}$
+    $\frac{1}{1 + \frac{1}{x}}$
+    $\sqrt{\frac{x}{x^2 + x + 1}}$
+
+    \section{行间公式}
+    \subsection{美元符号}
+    交换律是 
+    $$a+b=b+a$$
+    如
+    $$1+2=2+1=3$$
+
+    \subsection{中括号}
+    交换律是 
+    \[a+b=b+a\]
+    如
+    \[1+2=2+1=3\]
+
+    \subsection{displaymath环境}
+    交换律是 
+    \begin{displaymath}
+    a+b=b+a
+    \end{displaymath}
+    如
+    \begin{displaymath}
+    1+2=2+1=3
+    \end{displaymath}
+
+    \subsection{自动编号公式equation环境}
+    交换律见式\ref{eq:commutative1}
+    \begin{equation} % 在equation环境中的公式会自动编号
+        a+b=b+a \label{eq:commutative1}
+    \end{equation}
+
+    \subsection{不编号公式equation*环境}
+    交换律见式\ref{eq:commutative2}
+    \begin{equation*} % 在equation环境中的公式会自动编号
+        a+b=b+a \label{eq:commutative1}
+    \end{equation*}
+
+    公式的编号与交叉引用也是自动实现的，在排版中，要习惯于采用自动化的方式处理诸如图、比表、公式的编号与交叉引用
+    再如公式\ref{eq:pol}
+    \begin{equation}
+    x^5 - 7x^3 + 4x = 0 \label{eq:pol}
+    \end{equation}
+\end{document}

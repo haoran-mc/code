@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:  jdbc:mysql://localhost:3306/book?useSSL=false
+  jpa:
+    show-sql: true
+logging:
+  levl:
+    cn.edu.ncu.boot.jpademo: debug

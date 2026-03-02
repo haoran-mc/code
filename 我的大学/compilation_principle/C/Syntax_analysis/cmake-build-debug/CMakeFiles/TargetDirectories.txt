@@ -1,0 +1,3 @@
+/home/haoran/haoran/Code/Major/Compilation_principle/C/Syntax_analysis/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/haoran/haoran/Code/Major/Compilation_principle/C/Syntax_analysis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/haoran/haoran/Code/Major/Compilation_principle/C/Syntax_analysis/cmake-build-debug/CMakeFiles/Syntax_analysis.dir

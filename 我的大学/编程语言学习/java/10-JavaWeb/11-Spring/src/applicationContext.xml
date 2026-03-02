@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bookService" class="cn.edu.ncu.BookService" scope="prototype">
+        <constructor-arg index="0" value="Hello World"/>
+        <property name="bookDao" ref="bookDao"></property>
+    </bean>
+
+    <bean id="bookDao" class="cn.edu.ncu.dao.BookDao"></bean>
+
+    <bean id="userService" class="cn.edu.ncu.BeanFactory" factory-method="getUserService"></bean>
+
+    <bean id="beanFactory" class="cn.edu.ncu.BeanFactory"></bean>
+    <bean id="categoryService" factory-bean="beanFactory" factory-method="getCategoryService"></bean>
+
+    <bean id="book" class="cn.edu.ncu.vo.Book">
+        <property name="bookName" value="JavaWeb程序设计"></property>
+    </bean>
+</beans>

@@ -1,0 +1,36 @@
+#content {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 25px;
+    border: 1px solid black;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/*父级元素相对定位*/
+#content ul {
+    position: relative;
+}
+
+.tipText, .tipBg{
+    position: absolute;
+    width: 380px;
+    height: 25px;
+    top: 216px;
+}
+
+.tipText {
+    color: white;
+    z-index: 1; /*只要大于当前图层，就能显示*/
+}
+
+.tipBg {
+    background: black;
+    opacity: 0.5;  /*背景透明度*/
+}

@@ -1,0 +1,25 @@
+1
+3
+mathematics physics signals
+20
+physics 10 1
+physics 10 1
+physics 10 1
+physics 10 1
+physics 10 1
+physics 10 1
+physics 10 1
+mathematics 10 1
+mathematics 10 1
+mathematics 10 1
+mathematics 10 1
+mathematics 10 1
+mathematics 10 1
+mathematics 10 1
+signals 10 1
+signals 10 1
+signals 10 1
+signals 10 1
+signals 10 1
+signals 10 2
+19 1

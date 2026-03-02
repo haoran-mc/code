@@ -1,0 +1,8 @@
+vim xxx.cpp
+i
+ESC
+:wq
+gcc
+sudo apt install gcc
+gcc xxx.cpp -o main
+./main

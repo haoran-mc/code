@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+     document.getElementById('id');
+     // 选择器就是css的选择器
+     function isClick() {
+       alert('hello, jQuery');
+     }
+     /* $('#test-jquery').click(function () {
+      *   alert('hello, jQuery');
+      * }) */
+     $('#test-jquery').click(isClick())
+    </script>
+  </head>
+  <body>
+
+    <!--
+         公式： $(selector).action()
+    -->
+    <a href="" id="test-jquery">点我</a>
+  </body>
+</html>

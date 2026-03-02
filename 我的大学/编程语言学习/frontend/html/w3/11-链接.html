@@ -1,0 +1,41 @@
+<html>
+  <body>
+    <a href="url">Link text</a>
+    <br />
+    <a href="http://www.w3school.com.cn/">Visit W3school</a>
+
+    <h2>target属性</h2>
+    <p>使用target属性,你可以定义被链接的文档在何处显示</p>
+    <p>下面这行会在新窗口打开文档</p>
+    <a href="http://www.w3school.com.cn/" target="_blank">Visit W3school</a>
+
+    <h2>name属性</h2>
+    <p>
+      <pre>
+name属性规定锚(anchor)的名称
+你可以使用name属性创建HTML页面中的书签
+书签不会以任何方式显示,它对读者是不可见的
+当使用命名锚(named anchors)时,我们可以创建直接跳至该命名锚(比如页面中的某个小节)的链接,这样使用者就无需不停地使用滚动页来寻找他们需要的信息了
+      </pre>
+    </p>
+
+    <h2>命名锚的用法</h2>
+    <a name="label">锚(显示在页面上的文本)</a>
+
+    <p style="color: red; margin-left: 50px">提示:</p>
+    <p>锚的名称可以是任何名字</p>
+    <p style="color: red; margin-left: 50px">提示:</p>
+    <p>你可以使用id属性来替代name属性,命名锚同样有效</p>
+    
+    <a name="tips">基本的注意事项 - 有用的提示</a><br />
+    <a href="#tips">有用的提示</a><br />
+    <a href="http://www.w3school.com.cn/html/html_links.asp#tips">有用的提示</a><br />
+    <p>
+      提示：命名锚经常用于在大型文档开始位置上创建目录。可以为每个章节赋予一个命名锚，然后把链接到这些锚的链接放到文档的上部。如果您经常访问百度百科，您会发现其中几乎每个词条都采用这样的导航方式
+      提示：假如浏览器找不到已定义的命名锚，那么就会定位到文档的顶端。不会有错误发生
+    </p>
+
+    <h2>使用图像作为链接</h2>
+    <a href="http://haoran.love"><img src="img/next.png" /></a>
+  </body>
+</html>

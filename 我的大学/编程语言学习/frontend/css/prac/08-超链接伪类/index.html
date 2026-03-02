@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*默认的颜色*/
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+        /*鼠标悬停的颜色*/
+        a:hover {
+            color: orange;
+            font-size: 20px;
+        }
+        /*鼠标按住未释放的艳色*/
+        a:active {
+            color: green;
+        }
+        a:visited {
+            color: pink;
+        }
+        #price {
+            /*颜色，水平偏移，垂直偏移，模糊半径*/
+            text-shadow: red 5px 5px 3px;
+        }
+    </style>
+</head>
+<body>
+<a href="#">
+    <img src="./images/book.jpg" alt="">
+</a>
+<p>
+    <a href="#">码出高效：Java开发手册</a>
+</p>
+<p>
+    <a href="">作者：孤尽老师</a>
+</p>
+<p id="price">
+    ￥99
+</p>
+</body>
+</html>

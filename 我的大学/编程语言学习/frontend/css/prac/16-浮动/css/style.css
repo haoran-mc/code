@@ -1,0 +1,47 @@
+div {
+	margin: 10px;
+	padding: 5px;
+}
+
+#father {
+	border: 1px #000 solid;
+	/*display: inline-block;*/
+	/*
+    不会像overflow.html中那样隐藏
+    是因为那个文件规定了父级元素的大小
+    而这个文件中没有规定父级元素大小，父级元素是子级元素撑起来的
+    */
+	overflow: hidden;
+}
+/*和在父级元素后面手动添加一个空的div作用一样，只不过这是使用编程自动添加而已*/
+/*这是市面上最认可的解决方案*/
+#father:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.layer01 {
+	border: 1px #f00 dashed;
+	display: inline-block;
+	float: left;
+}
+
+.layer02 {
+	border: 1px #00f dashed;
+	display: inline-block;
+	float: right;
+}
+
+.layer03 {
+	border: 1px #060 dashed;
+	display: inline-block;
+	/* float: right; */
+}
+.layer04 {
+	border: 1px #666 dashed;
+	font-size: 12px;
+	line-height: 23px;
+	display: inline-block;
+	clear: both;
+}

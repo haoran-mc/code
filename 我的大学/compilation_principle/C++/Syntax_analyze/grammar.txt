@@ -1,0 +1,18 @@
+E->E+T|T
+T->T*F|F
+F->(E)|i
+
+E->TC
+C->+TC|-
+T->FG
+G->*FG|-
+F->(E)|i
+
+E->TE'
+E'->+TE'|-
+T->FT'
+T'->*FT'|-
+F->(E)|i
+
+E' -> C
+T' -> G

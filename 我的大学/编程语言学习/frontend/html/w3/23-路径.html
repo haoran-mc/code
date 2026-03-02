@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>
+			<table border="1">
+				<tr>
+					<th>路径</th>
+					<th>描述</th>
+				</tr>
+
+				<tr>
+					<td>&lt;img src=&quot;picture.jpg&quot;&gt;</td>
+					<td>picture.jpg 位于与当前网页相同的文件夹</td>
+				</tr>
+
+				<tr>
+					<td>&lt;img src=&quot;images/picture.jpg&quot;&gt;</td>
+					<td>picture.jpg 位于当前文件夹的 images 文件夹中</td>
+				</tr>
+
+				<tr>
+					<td>&lt;img src=&quot;/images/picture.jpg&quot;&gt;</td>
+					<td>picture.jpg 当前站点根目录的 images 文件夹中</td>
+				</tr>
+
+				<tr>
+					<td>&lt;img src=&quot;../picture.jpg&quot;&gt;</td>
+					<td>picture.jpg 位于当前文件夹的上一级文件夹中</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

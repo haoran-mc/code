@@ -1,0 +1,7 @@
+(display (apply max '(1 3 2)))
+(write "")
+(display (apply + 1 2 '(3 4 5)))
+(write "")
+(display (apply - 100 '(5 12 17)))
+(write "")
+(exit)

@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/Syntax_analysis.dir/main.c.o CMakeFiles/Syntax_analysis.dir/src/Word_analyze.c.o CMakeFiles/Syntax_analysis.dir/src/Recursive_descent_analyze.c.o CMakeFiles/Syntax_analysis.dir/src/Forecast_analyze.c.o -o Syntax_analysis 

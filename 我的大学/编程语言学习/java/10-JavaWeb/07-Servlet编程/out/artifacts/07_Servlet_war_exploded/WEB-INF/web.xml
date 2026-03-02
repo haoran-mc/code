@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ <!-- 设置全局参数 -->
+ <context-param>
+  <param-name>encoding</param-name>
+  <param-value>gb2312</param-value>
+ </context-param>
+ <filter>
+  <filter-name>EncodingFilter</filter-name>
+  <filter-class>filter.EncodingFilter</filter-class>
+ </filter>
+ <filter>
+  <display-name>TestFilter</display-name>
+  <filter-name>TestFilter</filter-name>
+  <filter-class>filter.TestFilter</filter-class>
+ </filter>
+ <filter-mapping>
+  <filter-name>EncodingFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+ </filter-mapping>
+ <filter-mapping>
+  <filter-name>TestFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+ </filter-mapping>
+ <servlet>
+  <servlet-name>InitServlet</servlet-name>
+  <servlet-class>servlets.InitServlet</servlet-class>
+  <!-- 设置局部参数 -->
+  <init-param>
+   <param-name>driverClassName</param-name>
+   <param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+  </init-param>
+ </servlet>
+ <servlet>
+  <servlet-name>WelcomeServlet</servlet-name>
+  <servlet-class>servlets.WelcomeServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>DealWithServlet</servlet-name>
+  <servlet-class>servlets.DealWithServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>InitServlet</servlet-name>
+  <url-pattern>/servlets/InitServlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>WelcomeServlet</servlet-name>
+  <url-pattern>/servlets/WelcomeServlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>DealWithServlet</servlet-name>
+  <url-pattern>/servlets/DealWithServlet</url-pattern>
+ </servlet-mapping>
+ <welcome-file-list>
+  <!-- 所要设定的欢迎页面 -->
+  <welcome-file>welcome.jsp</welcome-file>
+ </welcome-file-list>
+ <login-config>
+  <auth-method>BASIC</auth-method>
+ </login-config>
+ <error-page>
+  	<exception-type>java.lang.Exception</exception-type>
+  	<location>/error.jsp</location>
+</error-page>
+ 
+</web-app>

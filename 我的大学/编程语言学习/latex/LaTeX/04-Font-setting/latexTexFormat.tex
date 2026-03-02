@@ -1,0 +1,69 @@
+% 导言区
+\documentclass[10pt]{article} % 一般只有10 11 12
+
+\usepackage{ctex}
+
+% LaTeX的思想是格式与内容的分离，所以不建议直接在文档中使用大量命令
+% 而是用newcommandi命令定义一个新的命令以执行相关的操作
+\newcommand{\myfont}{\textif{\textbf{\textsf{}}}}
+
+% 正文区
+\begin{document}
+    % 字体族设置(罗马字体、无衬线字体、打字机字体)
+    % 只设置单独的字体
+    \textrm{Roman Family} % 字体族设置命令
+    \textsf{Sans Serif Family} % 无衬线字体命令
+    \texttt{Typewriter Family} % 打字机字体命令
+
+    % 设置后续的字体
+    \rmfamily Roman Family % 字体声明声明后续字体为罗马字体
+    % 设置大括号中的字体
+    {\sffamily Sans serif Family} % 使用大括号限定作用的范围
+    {\ttfamily Typewriter Family}
+
+
+    % 字体系列设置(粗细、宽度)
+    \textmd{Medium Series} \textbf{Boldface Series}
+
+    {\mdseries Medium Series} {\bfseries Boldface Series}
+
+    % 字体形状(直立、斜体、伪斜体、小型大写)
+    % 字体设置命令
+    \textup{Upright Shape} \textit{Italic Shape}
+    \textsl{Slanted Shape} \textsc{Small Caps Shape}
+
+    % 字体设置声明
+    {\upshape Upright Shape} {\itshape Italic Shape}
+    {\slshape Slanted Shape} {\scshape Small Caps Shape}
+
+
+    % 中文字体
+    {\songti 宋体} \quad {\heiti 黑体} \quad {\fangsong 仿宋} \quad {\kaishu 楷书}
+
+    中文字体的\textbf{粗体}与\textit{斜体}
+
+
+    % 字体大小
+    % 这些声明是以normal set相对大小实现的
+    % 而normal set大小是以文档类的参数控制的
+    % 文档类的参数是可选参数，可以在方括号中添加
+    {\tiny          Hello}\\
+    {\scriptsize    Hello}\\
+    {\footnotesize  Hello}\\
+    {\small         Hello}\\
+    {\normalsize    Hello}\\
+    {\large         Hello}\\
+    {\Large         Hello}\\
+    {\LARGE         Hello}\\
+    {\huge          Hello}\\
+    {\Huge          Hello}\\
+
+
+    % 中文字号设置命令
+    \zihao{-0} 你好！
+
+    \zihao{5} 你好！
+
+    % \myfont
+
+\end{document}

@@ -1,0 +1,5 @@
+#include <cstdio>
+int main() {
+    printf("%c", 7);
+    return 0;
+}

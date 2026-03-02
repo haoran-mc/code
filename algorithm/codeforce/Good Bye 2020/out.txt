@@ -1,0 +1,14 @@
+ba0ba 2 1
+ab0ac 2 1
+codeforces 2 1
+zer0orez 2 1
+abcdcba 2 7
+012345b 2 1
+a 2 1
+1
+1
+0
+1
+0
+6
+0

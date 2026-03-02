@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Gun.h
+string
+-
+
+../include/Soldier.h
+string
+-
+Gun.h
+../include/Gun.h
+
+/home/haoran/haoran/work/code/01-C++/CMake_Project/main.cpp
+Gun.h
+/home/haoran/haoran/work/code/01-C++/CMake_Project/Gun.h
+Soldier.h
+/home/haoran/haoran/work/code/01-C++/CMake_Project/Soldier.h
+iostream
+-
+

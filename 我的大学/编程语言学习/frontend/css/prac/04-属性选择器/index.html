@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .demo a {
+            float: left;
+            display: block;
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+            background: blue;
+            text-align: center;
+            color: gainsboro;
+            text-decoration: none;
+            margin-right: 5px;
+            /*粗细，大小，行高，字体*/
+            font: bold 20px/50px Arial;
+        }
+        /*
+        存在id属性的元素
+        #id...
+        a[]{}  方括号中是属性名 = 属性值(正则)
+        */
+        a[id] {
+            background: yellow;
+        }
+        /*因为id是唯一的，所以不用加引号*/
+        a[id=second] {
+            background: gray;
+        }
+        /* =是唯一确定 */
+        a[class = "second links active"] {
+            background: green;
+        }
+        /* *=是包含 */
+        a[class *= "fourth"] {
+            background: purple;
+        }
+        /* ^=选中特定开头元素*/
+        a[href ^= "https"] {
+            background: red;
+        }
+        /* $=选中特定结尾元素*/
+        a[href $= "png"] {
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+<p class="demo">
+    <a href="http://haoran.love" class="first links item" id="first">1</a>
+    <a href="http://haoran.love" class="second links active" target="_blank">2</a>
+    <a href="http://haoran.love" title="ogmc">3</a>
+    <a href="./audio/test.mp3" class="fourth links text">4</a>
+    <a href="./video/test.mp4" title="ormc" target="_self">5</a>
+    <a href="./css/test.css" name="links">6</a>
+    <a href="./images/test.png" class="help">7</a>
+    <a href="http://haoran.love" id="second">8</a>
+    <a href="https://www.baidu.com" class="links active">9</a>
+    <a href="https://www.baidu.com" class="last links item" target="_blank">10</a>
+</p>
+</body>
+</html>

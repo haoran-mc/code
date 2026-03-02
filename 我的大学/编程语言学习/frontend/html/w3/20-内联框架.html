@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>iframe语法</h2>
+    <code>
+      <iframe src="URL"></iframe>
+    </code>
+
+    <h2>设置高度和宽度</h2>
+    <p>
+      height 和 width 属性用于规定 iframe 的高度和宽度。
+      属性值的默认单位是像素，但也可以用百分比来设定（比如 "80%"）
+    </p>
+    <code>
+      <iframe src="demo_iframe.htm" width="200" height="200"></iframe>
+    </code>
+
+    <h2>删除边框</h2>
+    <p>
+      frameborder 属性规定是否显示 iframe 周围的边框。 设置属性值为 "0"
+      就可以移除边框：
+    </p>
+    <code>
+      <iframe src="demo_iframe.htm" frameborder="0"></iframe>
+    </code>
+
+    <h2>使用iframe作为链接的目标</h2>
+    <p>
+      iframe 可用作链接的目标（target）。 链接的 target 属性必须引用 iframe 的
+      name 属性：
+    </p>
+    <code>
+      <iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+      <p>
+        <a href="http://www.w3school.com.cn" target="iframe_a"
+          >W3School.com.cn</a
+        >
+      </p>
+    </code>
+
+    <h2>实例</h2>
+    <iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+    <p>
+      <a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a>
+    </p>
+  </body>
+</html>

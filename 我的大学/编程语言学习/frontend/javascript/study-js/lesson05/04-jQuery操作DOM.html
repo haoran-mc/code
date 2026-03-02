@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+     // html
+     $('#text' li[name=python]).text();   // 获得值
+     $('#text' li[name=python]).text('assembly');
+     $('#text').html();
+     $('#text').html('<strong>str</strong>');
+
+     // css
+     $('#text' li[name=python]).css({"color", "red"}, {"background", "black"});
+    </script>
+  </head>
+  <body>
+    <ul class="text">
+      <li name="java">Java</li>
+      <li name="python">Python</li>
+      <li name="C">C++</li>
+      <li name="javascript">JavaScript</li>
+    </ul>
+  </body>
+</html>

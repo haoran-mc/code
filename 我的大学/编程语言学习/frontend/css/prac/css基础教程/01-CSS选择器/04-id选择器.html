@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<style>
+			#red {
+				color: red;
+			}
+			#green {
+				color: green;
+			}
+			/* 使用id选择器建立派生选择器，下面的样式只会应用于出现id是sidebar的元素内的段落 */
+			/* 在这里，与页面中其他p元素不同的是，sidebar内的p元素得到了特殊处理，h2也是 */
+			#sidebar p {
+				font-style: italic;
+				text-align: right;
+				margin-top: 0.5em;
+			}
+			#sidebar h2 {
+				font-size: 1em;
+				font-weight: normal;
+				font-style: italic;
+				margin: 0;
+				line-height: 1.5;
+				text-align: right;
+			}
+			/* id 选择器即使不被用来创建派生选择器，它也可以独立发挥作用： */
+			#sidebar {
+				border: 1px dotted #000;
+				padding: 10px;
+			}
+			/* 根据这条规则，id 为 sidebar 的元素将拥有一个像素宽的黑色点状边框，同时其周围会有 10 个像素宽的内边距（padding，内部空白） */
+		</style>
+	</head>
+	<body>
+		<h1>id选择器</h1>
+		<p>id选择器可以为标有特定id的HTML元素指定特定的样式</p>
+		<p>id选择器以"#"来定义</p>
+		<p id="red">这个段落是红色</p>
+		<p id="green">这个段落是绿色</p>
+		<p>id属性只能在每个HTML文档中出现一次</p>
+	</body>
+</html>

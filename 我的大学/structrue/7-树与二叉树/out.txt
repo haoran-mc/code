@@ -1,0 +1,20 @@
+preorder:  0 1 2 3 4 5 6 
+inorder:   2 1 4 5 3 6 0 
+postorder: 2 5 4 6 3 1 0 
+
+TreeDepth       = 5
+TreeSumNode     = 7
+TreeSumLeftNode = 3
+LeftDepth       = 4
+
+norePreorder:  0 1 2 3 4 5 6 
+noreInorder1:  2 1 4 5 3 6 0 
+noreInorder2:  2 1 4 5 3 6 0 
+norePostorder: 2 5 4 6 3 1 0 
+
+the route of '5' is: 0 -> 1 -> 3 -> 4 -> 5
+
+preorder:  - + a * b - c d / e f 
+inorder:   a + b * c - d - e / f 
+postorder: a b c d - * + e f / - 
+

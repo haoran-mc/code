@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/swap.h
+iostream
+-
+
+/home/haoran/haoran/work/code/01-C++/VScode/VSC_Demo_swap/main.cpp
+swap.h
+/home/haoran/haoran/work/code/01-C++/VScode/VSC_Demo_swap/swap.h
+
+/home/haoran/haoran/work/code/01-C++/VScode/VSC_Demo_swap/src/swap.cpp
+swap.h
+/home/haoran/haoran/work/code/01-C++/VScode/VSC_Demo_swap/src/swap.h
+

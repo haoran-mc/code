@@ -1,0 +1,7 @@
+(display (reduce + 0 '(1 2 3 4)))
+(display (reduce + 0 '(1 2)))
+(display (reduce + 0 '(1)))
+(display (reduce + 0 '()))
+(display (reduce + 0 '(foo)))
+(display (reduce list '() '(1 2 3 4)))
+(exit)

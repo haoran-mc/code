@@ -1,0 +1,14 @@
+6 6
+ooo#oo
+oooooo
+#*##oo
+oo##o#
+ooXooo
+@o#ooo
+
+4 4
+oooo
+oo*@
+oooo
+oXoo
+

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+    <script>
+     function ThisSubmit() {
+       /* alert("click"); */
+       var username = document.getElementById('username');
+       var password = document.getElementById('password');
+       console.log(username.value);
+       console.log(password.value);
+     }
+     function changePwd() {
+       var username = document.getElementById('username');
+       var password = document.getElementById('password');
+       var md5 = document.getElementById('md5-password');
+       console.log(username.value);
+       // MD5算法
+       password.value = md5(password.value);
+       console.log(password.value);
+       /* password.value = '***'; */
+       return true;   // 为什么要返回值呢？如果是true表示表单内容通过校验，否则没有通过校验
+     }
+    </script>
+  </head>
+  <body>
+    <!--
+         表单绑定一个提交事件
+         onsubmit = 绑定一个提交检测的函数，true, false
+         将这个结果返回给表单，使用onsubmit接收
+         一般通过这个绑定
+    -->
+    <form action="#" method="post" onsubmit="return changePwd()">
+      <p>
+        <span>用户名: </span> <input type="text" id="username" />
+      </p>
+      <p>
+        <span>密码: </span>
+        <input name="" type="password" value="" id="password"/>
+        <!-- 推荐使用hidden的方式，而不是上面那个password的方式，不然changePwd函数中更改密码的那句将在提交一瞬间把密码修改，用户体验不好 -->
+        <input name="password" type="hidden" value="" id="md5-password"/>
+      </p>
+
+
+      <!--
+           绑定事件
+           上面用form绑定了，所以就不用button绑定了
+      -->
+      <!-- <button type="button" onclick="changePwd()">提交</button> -->
+      <button type="button">提交</button>
+    </form>
+  </body>
+</html>

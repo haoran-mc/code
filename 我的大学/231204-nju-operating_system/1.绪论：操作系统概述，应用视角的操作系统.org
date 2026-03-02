@@ -1,0 +1,91 @@
+#+BLOCK_LINE: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#+TITLE: 1.绪论：操作系统概述，应用视角的操作系统
+#+AUTHOR: Haoran Liu
+#+EMAIL: haoran.mc@outlook.com
+#+DATE: 2023-12-04 23:12 Mon
+#+BLOCK_LINE: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+(require 'jupyter)
+
+#+begin_src jupyter-python :session py
+  import os
+  import ipywidgets as widgets
+  import IPython.display as display1
+  import pygments
+  from pygments.lexers import get_lexer_by_name
+  from pygments.formatters import HtmlFormatter
+
+  def display_folder_contents(folder_path):
+      def highlight_code(code, lexer_name):
+          formatter = HtmlFormatter(style='colorful')
+          highlighted_code = pygments.highlight(code, get_lexer_by_name(lexer_name), formatter)
+          css = "<style>{}</style>".format(formatter.get_style_defs('.highlight'))
+          return css + highlighted_code
+
+      # Mapping of file extensions to Pygments lexer names
+      lexer_mapping = {
+          '.py': 'python',
+          '.cpp': 'cpp',
+          '.c': 'c',
+          '.md': 'markdown',
+          '.Makefile': 'makefile',
+          '.txt': 'text',
+          '.S': 'asm',
+          '.asm': 'asm'
+      }
+
+      # Get a list of all files in the folder
+      file_names = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
+      # Sort list of all files, support only 0-9
+      file_names.sort(key=lambda x:int(x[:1]))
+
+      # Create a tab for each file
+      tabs = widgets.Tab()
+      tab_contents = []
+      for file_name in file_names:
+          # Read the contents of the file
+          with open(os.path.join(folder_path, file_name), 'r') as f:
+              code = f.read()
+          # Determine the lexer name based on the file extension
+          lexer_name = lexer_mapping.get(os.path.splitext(file_name)[1], 'text')
+          # Add a tab with the highlighted code
+          tab_contents.append(widgets.HTML(value=highlight_code(code, lexer_name)))
+      tabs.children = tab_contents
+      for i, file_name in enumerate(file_names):
+          tabs.set_title(i, file_name[2:])
+
+      display1.display(tabs)
+#+end_src
+
+#+RESULTS:
+
+#+begin_src jupyter-python :session py
+  from IPython.display import display, IFrame
+
+  def display_html_file(file_path, width=550, height=350):
+      """
+      Displays an HTML file in a Jupyter notebook using an inline frame.
+      Arguments:
+          - file_path (str): Path to the HTML file.
+          - width (int): Width of the inline frame in pixels (default: 550).
+          - height (int): Height of the inline frame in pixels (default: 350).
+      """
+      display(IFrame(file_path, width=width, height=height))
+#+end_src
+
+#+RESULTS:
+
+#+begin_src jupyter-python :session py
+  display_html_file("slides/1.2.html")
+#+end_src
+
+#+begin_export html
+<iframe
+    width="550"
+    height="350"
+    src="slides/1.2.html"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+#+end_export

@@ -1,0 +1,116 @@
+% 导言区
+\documentclass{article}
+
+\usepackage{ctex} % 中文处理宏包
+\usepackage{xltxtra} % 提供了针对XeTeX的改进并且加入了XeTeX的LOGO
+\usepackage{texnames} % 一些LOGO
+\usepackage{mflogo}
+
+% 正文区
+\begin{document}
+    \section{空白符号}
+% 空行分段，多个空行等同1个
+% 自动缩进，绝对不能使用空格代替
+% 英文中多个空格处理为1个空格，中文中空格将被忽略
+% 汉字与其他字符的间距会自动有XeLaTeX处理
+% 禁止使用中文全角空格
+http://www.ruiwen.com/wenxue/juzi/687855.html
+
+However                mean your life is, meet it and live it ;do not shun it and call it hard names.
+It is not so bad as you are.
+It looks poorest when you are richest.
+The fault-finder will find faults in paradise.
+Love your life, poor as it is.
+You may perhaps have some pleasant, thrilling, glorious hours, even in a poor-house.
+The setting sun is reflected from the windows of the alms-house as brightly as from the rich man's abode; the snow melts before its door as early in the spring.
+I do not see but a quiet mind may live as contentedly there, and have as cheering thoughts, as in a palace.
+The town's poor seem to me often to live the most independent lives of any.
+May be they are simply great enough to receive without misgiving.
+Most think that they are above being supported by the town; but it often happens that they are not above supporting themselves by dishonest means.
+which should be more disreputable.
+Cultivate poverty like a garden herb, like sage.
+Do not trouble yourself much to get new things, whether clothes or friends, Turn the old, return to them.
+Things do not change; we change.
+Sell your clothes and keep your thoughts.
+
+不论                        你的生活如何卑贱，你要面对它生活，不要躲避它，更别用恶言咒骂它。
+它不像你那样坏。
+你最富有的时候，倒是看似最穷。
+爱找缺点的人就是到天堂里也能找到缺点。
+你要爱你的生活，尽管它贫穷。
+甚至在一个济贫院里，你也还有愉快、高兴、光荣的时候。
+夕阳反射在济贫院的窗上，像身在富户人家窗上一样光亮；在那门前，积雪同在早春融化。
+我只看到，一个从容的人，在哪里也像在皇宫中一样，生活得心满意足而富有愉快的思想。
+城镇中的穷人，我看，倒往往是过着最独立不羁的生活。
+也许因为他们很伟大，所以受之无愧。
+大多数人以为他们是超然的，不靠城镇来支援他们；可是事实上他们是往往利用了不正当的手段来对付生活，他们是毫不超脱的，毋宁是不体面的。
+视贫穷如园中之花而像圣人一样耕植它吧！不要找新的花样，无论是新的朋友或新的衣服，来麻烦你自己。
+找旧的，回到那里去。万物不变，是我们在变。你的衣服可以卖掉，但要保留你的思想
+
+
+    % 1em(当前字体中M的宽度)
+    a \quad b
+
+    % 2em
+    a \qquad b
+
+    % 约为1/6个em
+    a\,b 
+
+    a\thinspace b
+
+    % 0.5个em
+    a\enspace b
+    
+    % 空格
+    a\ b
+
+    % 硬空格
+    a~b
+
+    % 1pc = 12 pt = 4.218mm
+    a\kern 1pc b
+
+    a\kern -1em b
+
+    a\hskip 1em b
+    
+    a\hspace{35pt}b
+
+    % 占位宽度
+    a\hphantom{xyz}b
+
+    % 弹性长度
+    a\hfill b % 充满整个空间
+
+    \section{\LaTeX 控制符}
+    \# \$ \% \{ \} \~{} \_{} \^{} \textbackslash \&
+
+    \section{排版符号}
+    \S \P \dag \ddag \copyright \pounds
+
+    \section{\TeX 标志符号}
+    % 基本符号
+    \TeX{} \LaTeX{} \LaTeXe{} \XeLaTeX
+
+    % texnames宏包提供
+    \AmSTeX{} \AmS-\LaTeX{}
+    \BibTeX{} \LuaTeX{}
+
+    % mflogo宏包提供
+    \METAFONT{} \MF{} \MP{}
+
+    \section{引号}
+    ` ' `` ''
+    ``你好''
+
+    \section{连字符}
+    - -- ---
+
+    \section{非英文字符}
+    \oe \OE \ae \AE \aa \AA \o \O \l \L \ss \SS !` ?`
+
+    \section{重音符号(以o为例)}
+    \`o \'o \^o \''o \~o \=o \.o \u{o} \v{o} \H{o} \r{o} \t{o} \b{o} \c{o} \d{o}
+
+\end{document}

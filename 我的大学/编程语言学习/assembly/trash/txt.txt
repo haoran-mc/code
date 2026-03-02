@@ -1,0 +1,87 @@
+--
+--
+ip
+00
+cs
+00
+sum
+00
+table
+00
+00
+00
+ds
+00
+
+
+;--------------------source module 1-------------------------
+
+ertrn prog2:far
+
+; extrn var2:word,lab2:far
+public var1,lab1
+
+data1 segment
+    var1 db ?
+    var3 db ?
+    var4 db ?
+data1 ends
+code1 segment
+assume cs:code1,ds:data1
+main proc far
+start:
+    mov ax,data1
+    mov ds,ax
+    jmp far ptr prog2
+
+lab1:
+
+    mov ah,4ch
+    int 21h
+main endp
+code1 ends
+end start
+
+;--------------------source module 2-------------------------
+
+public prog2
+
+extrn var1:byte,var4:word
+public var2
+
+data2 segment
+    var2 dw 0
+    var3 db 5 dup(?)
+data2 ends
+code2 segment
+assume cs:code2,ds:data2
+prog2:
+    mov ax,0
+    mov bx,1
+    
+code2 ends
+end
+
+;--------------------source module 3-------------------------
+
+extrn lab1:far
+public lab2,lab3
+
+code3 segment
+assume cs:code3
+lab2:
+    ret
+
+lab3:
+    ret
+
+code3 ends
+end
+
+
+
+
+- 主程序实现菜单
+- 显示输出要操作的名字
+
+- 之后call，跳转到另一个模块

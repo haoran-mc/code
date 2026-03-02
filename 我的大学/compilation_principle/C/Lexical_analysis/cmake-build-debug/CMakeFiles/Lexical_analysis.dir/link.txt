@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/Lexical_analysis.dir/main.c.o -o Lexical_analysis 

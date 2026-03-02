@@ -1,0 +1,24 @@
+3 5 7 
+ i = 1 j = 0                            mult = 3 res = 7000
+ i = 2 j = 1                            mult = 5 res = 11200
+ i = 3 j = 0 i = 3 j = 1                mult = 15 res = 9800
+ i = 4 j = 2                            mult = 7 res = 12800
+ i = 5 j = 0 i = 5 j = 2                mult = 21 res = 11800
+ i = 6 j = 1 i = 6 j = 2                mult = 35 res = 11200
+ i = 7 j = 0 i = 7 j = 1 i = 7 j = 2    mult = 105 res = 11400
+ res = 11400
+ i = 1 j = 0                            mult = 3 res = 0
+ i = 2 j = 1                            mult = 5 res = 0
+ i = 3 j = 0 i = 3 j = 1                mult = 15 res = 0
+ i = 4 j = 2                            mult = 7 res = 0
+ i = 5 j = 0 i = 5 j = 2                mult = 21 res = 0
+ i = 6 j = 1 i = 6 j = 2                mult = 35 res = 0
+ i = 7 j = 0 i = 7 j = 1 i = 7 j = 2    mult = 105 res = 0
+ res = 0
+Case #1: 9600
+5 
+ i = 1 j = 0                            mult = 5 res = 3
+ res = 3
+ i = 1 j = 0                            mult = 5 res = 0
+ res = 0
+Case #2: 10

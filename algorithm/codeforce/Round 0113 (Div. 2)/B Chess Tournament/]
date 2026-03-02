@@ -1,0 +1,10 @@
+#include <cstdio>
+
+int main() {
+    int t; scanf("%d", &t);
+    while (t --) {
+        int n; scanf("%d", &t);
+        chat str[55]; scanf("%s", str);
+    }
+    return 0;
+}

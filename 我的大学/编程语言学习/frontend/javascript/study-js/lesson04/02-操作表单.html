@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <script>
+     var input_text = document.getElementById('username');
+     // 得到输入框的值
+     input_text.value;
+     input_text.value = 123;
+
+     var boy_radio = document.getElementById('boy');
+     var girl_radio = document.getElementById('girl');
+     boy_radio.checked;  // 根据true与false判断是否被选中
+     boy_radio.checked = true;   // 还可以赋值
+    </script>
+  </head>
+  <body>
+    <form action="post">
+      <p>
+        <span>用户名: </span>
+        <input type="text" id="username" />
+      </p>
+      <p>
+        <span>性别: </span>
+        <input type="radio" name="sex" value="man" id="boy"> 男
+        <input type="radio" name="sex" value="women" id="girl"> 女
+      </p>
+      <input name="" type="submit" value="提交"/> 
+    </form>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Compile",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"${file}",
+				"-o", //a.exe
+				// "${fileDirname}/${fileBasenameNoExtension}.exe",//
+				//"D:/work/@vscode/_exe/${fileBasenameNoExtension}.exe",
+				"~/haoran/work/editor/VScode/_exe/${fileBasenameNoExtension}.exe",
+				"-g"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
+

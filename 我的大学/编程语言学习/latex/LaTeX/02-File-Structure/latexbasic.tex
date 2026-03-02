@@ -1,0 +1,25 @@
+% 导言区
+\documentclass{article} % book, report, letter
+
+\usepackage{ctex} % 处理中文
+\title{My First Document} % 设置标题
+\author{name} % 设置作者
+\date{\today} % 编辑文档的时间
+
+
+
+% 正文区(文稿区)
+% \begin{环境名称} 一个LaTeX文档有且只有一个document环境
+% 内容...
+% \end{环境名称}
+\begin{document}
+    \maketitle
+
+    Hello World!
+
+    Let $f(x)$ be defined by the formula  % 被$符号包围的是数学模式，之外的是文本模式
+
+    $f(x) = 3x^2 + x - 1$. % 单$表示行内模式
+
+    $$f(x) = 3x^2 + x - 1$$ which is a polynomial of degree 2. % 双$表示行间模式
+\end{document}

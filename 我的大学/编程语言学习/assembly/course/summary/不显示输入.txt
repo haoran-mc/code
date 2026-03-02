@@ -1,0 +1,33 @@
+CC SEGMENT
+ASSUME CS:CC
+START:
+MOV AH, 7
+INT 21H
+CMP AL, 13
+JZ EXIT
+MOV DL, '*'
+MOV AH, 2
+INT 21H
+JMP START
+EXIT:
+MOV AH, 4CH
+INT 21H
+CC ENDS
+END START
+
+code segment
+assume cs:code
+strat:
+    mov ah,7
+    int 21h
+    cmp al,0dh
+    jz exit
+    mov dl,'*'
+    mov ah,2
+    int 21h
+    jmp start
+exit:
+    mov ah,4ch
+    int 21h
+code ends
+end start

@@ -1,0 +1,55 @@
+Scheduling problems are difficult optimization problems that are among the most studied by the communities of operations research and artificial intelligence.
+In the scheduling literature, it is very common to assume that all information is static over time and known in advance.
+However, in real manufacturing environments there are unexpected events throughout the production process, such as new jobs arrivals, cancellation of scheduled jobs and breakdown of machines or failures of some operations, which are difficult to predict.
+These unforeseen events may cause the need to modify the predefined processing sequence of jobs.
+Dynamic scheduling refers to problems where data may change during the execution of the schedule and some information is not available to the scheduler at the planning stage (Larsen & Pranzo, 2018).
+Rescheduling is the process of updating an existing production schedule in response to disruptions or other changes (Vieira, Herrmann, & Lin, 2003).
+Typically, to solve a dynamic scheduling problem, a schedule is generated before starting the production process which is revised and modified over time to adapt to changes in the system state.
+The rescheduling frequency indicates how often a reschedule process will be carried out.
+The rescheduling policy decides when a new rescheduling process can be started (Larsen & Pranzo, 2018).
+Rescheduling policies can be classified as periodic, continuous or event-driven (Ouelhadj & Petrovic, 2009).
+According to da Silva, Scarpin, Pécora, and Ruiz (2019), the development of efficient computational methods to address dynamic problems becomes more relevant at the time of the fourth industrial revolution (Industry 4.0).
+It established the concepts such as cyber-physical system and smart factories which demands automatized and mass customized production of industries (Tang, Li, Wang, & Dong, 2017), emphasizing the importance of dynamic manufacturing environments.
+The manufacturing systems of Industry 4.0 are composed by intelligent manufacturing systems implemented through automation mechanisms.
+Therefore, having tools to deal with unexpected events is more important in this context, since decisions to re-establish the system must be taken in real time.
+Hence the importance of developing fast computational methods that are capable of solving these dynamic problems.
+Another common assumption when studying scheduling problems is to consider that there are no machine setup times or that they depend only on the job that is going to be processed.
+In order to simplify the problem and handle it as a problem without setup times, frequently these setup times are included in the job processing times.
+When the time required to prepare the machine for processing a given job depends not only on that job, but also depends on the last processed job, the setup times are called sequence-dependent.
+It has been recognized that tremendous savings can be achieved when setup times are explicitly included in scheduling decisions in various real world industrial/service environments (Allahverdi & Soroush, 2008).
+However, their explicit inclusion substantially increases the problem complexity, causing that problems, that before could be solved by simple rules, now become NP-hard problems in a strong sense.
+Consequently, considering dynamic environments and sequence-dependent setup times makes the problem more realistic, but also more challenging from an algorithmic and modeling point of view.
+In this paper we address the minimization of the completion time of the last processed job (makespan or ) in a single machine scheduling problem where the setup times are sequence-dependent and the jobs to be processed arrive throughout the production process with release times that are not known in advance.
+That is, we study a dynamic single machine scheduling problem with sequence-dependent setup times where the objective is to find a job processing order that minimizes the makespan.
+The study of single machine problems is an essential step to the study of more complicated multi-processor problems, as it may be considered a special case of them.
+Moreover, it provides useful insights that allows a better understanding and handling of more complex scheduling environments Pinedo (2016).
+To handle the addressed problem we consider a periodic rescheduling approach.
+When such approach is conducted, the production horizon is divided into fixed-length time intervals and a re-optimization process is launched at the beginning of each time interval.
+The goal is to obtain a jobs sequence for the current time interval.
+In order to construct the sequence in a given time interval it will be used the jobs that could not be processed in the previous intervals plus the new released jobs.
+In this work we implement two strategies for obtaining a jobs sequence in each time interval.
+The global solution to the problem is a sequence composed of the union of the jobs sequences of all the intervals.
+The first proposed strategy proceeds in the following way: Firstly, a minimum makespan sequence is obtained with all the available jobs at the re-optimization point.
+Then, the jobs are taken from this sequence and assigned to the interval between the current re-optimization point and the next one in the same order they are in the sequence, until reaching the job that its completion exceeds the next point of re-optimization.
+The jobs that were not assigned will be available at the next re-optimization point.
+The first time that the re-optimization process is launched the set of available jobs are composed by all the static jobs, while in subsequent re-optimization points the set of available jobs is composed of all the jobs that were not assigned in the previous interval and the new jobs that were released during that interval.
+In the second strategy, we proceed in a different way.
+Instead of constructing a sequence with all available jobs in each re-optimization point, we try to insert to the current interval as many jobs as possible using an iterative insert-improve algorithm.
+That is, we insert only those jobs that can be completed until the next re-optimization point.
+The aim of this strategy is not to spend time scheduling jobs that could later be rescheduled.
+To implement these two strategies we design metaheuristic algorithms that are composed of a constructive procedure and different improvement procedures.
+Specifically, we propose and test three variants for the improvement procedure: a composite local search and other two based on the Iterated Greedy metaheuristic.
+The proposed algorithms are tested on a large set of instances.
+The best version of the proposed algorithms will be assessed through the comparison with the “ideal”results of a perfect information model and with the results of the best method reported in da Silva et al. 
+(2019). To the best of our knowledge, this is the first time that a problem with these characteristics is addressed using periodic rescheduling approaches.
+In the literature review we only find a paper (da Silva et al., 2019) that studies a problem with similar characteristics to the one discussed in our work.
+In da Silva et al. (2019) it is considered the makespan minimization in a dynamic single machine scheduling problem with sequence-dependent setup times.
+The set of jobs to process is modified throughout the production process by the arrival of new jobs or by the cancellation of others that have not yet been processed.
+Unlike our work, they considered order cancellations and use a continuous rescheduling approach, where the re-optimization process is launched every time a new event occurs.
+Bearing in mind that in dynamic problems there is very little time to make decisions, the main objective of the work is to design and implement very fast algorithms that are capable to obtain high quality solutions for the addressed dynamic problem.
+The rest of the paper is organized as follows.
+Section 2 presents the literature review.
+In Section 3 the problem is introduced and the mathematical model for the static problem is presented, while the Perfect Information Model is given in Section 4.
+Section 5 is devoted to the solution method.
+First, the proposed constructive and improvement procedures are described and then, it is discussed how they are used in the two strategies proposed to deal with the problem.
+Computational experiments are presented in Section 6 and finally, in Section 7, concluding remarks are given.

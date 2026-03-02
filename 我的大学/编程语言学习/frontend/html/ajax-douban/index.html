@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>豆瓣电影</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_441987_jku0r4ifamcuwhfr.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <!-- top250 -->
+      <section id="top250" class="active">
+        <div class="container">
+        </div>
+        <div class="loading"><span class="iconfont icon-loading"></span></div>
+      </section>
+      <!-- 北美 -->
+      <section id="usBox">
+        <div class="container">
+        </div>
+        <div class="loading"><span class="iconfont icon-loading"></span></div>
+      </section>
+      <!-- 搜索 -->
+      <section id="search">
+        <div class="search-area">
+          <input type="text" placeholder="搜索电影"><span class="button">搜索</span>
+        </div>
+        <div class="search-result">
+          <div class="container"></div>
+          <div class="loading"><span class="iconfont icon-loading"></span></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="active"><span class="iconfont icon-paihang1"></span><span>Top250</span></div>
+      <div><span class="iconfont icon-beimei"></span><span>北美</span></div>
+      <div><span class="iconfont icon-sousuo"></span><span>搜索</span></div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

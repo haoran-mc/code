@@ -1,0 +1,59 @@
+<!--
+失败总结：超链接不能有宽度和高度
+额，可以，display转换为inline-block就可以
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+            padding: 5px;
+        }
+        a {
+            width: 100px;
+            height: 100px;
+            text-decoration: none;
+            color: white;
+            background: pink;
+            display: inline-block;
+            line-height: 100px;
+            text-align: center;
+        }
+        a:nth-of-type(1) {
+            position: relative;
+        }
+        a:nth-of-type(2) {
+            position: relative;
+            left: 100px;
+        }
+        a:nth-of-type(3) {
+            position: relative;
+            left: 100px;
+        }
+        a:nth-of-type(4) {
+            position: relative;
+        }
+        a:nth-of-type(5) {
+            position: relative;
+            left: 100px;
+        }
+        a:hover {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+        <a href="#">链接1</a><a href="#">链接2</a>
+        <br>
+        <a href="#">链接3</a>
+        <br>
+        <a href="#">链接4</a><a href="#">链接5</a>
+</div>
+</body>
+</html>

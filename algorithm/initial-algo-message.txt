@@ -1,0 +1,8 @@
+1. PAT Basic Level
+
+• 按上面几个题单顺序刷。刷到一个新算法的时候，就专心刷熟这个新算法。
+
+- C-<return> note-algo.org
+
+
+
