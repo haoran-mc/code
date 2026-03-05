@@ -41,6 +41,12 @@ void clear(queue<int> &q) { // 清空队列
 
 int sigma(char c) { return c - 'a'; }; // 字符转换为对应的字母下标，常用于 Trie 树的子节点索引
 
+string trim(string s, char c = ' ') {
+    s.erase(0, s.find_first_not_of(c)); // 去前缀
+    s.erase(s.find_last_not_of(c) + 1); // 去后缀
+    return s;
+}
+
 int sgn(double x) { // 判断x是否等于0
     if (fabs(x) < eps)
         return 0;
