@@ -1,0 +1,10 @@
+[Unit]
+Description=Screen capture + OCR logger (one-shot)
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/haoran/code/demos/260529-py-capture/capture.py
+# 屏蔽控制台噪声；错误自己写到 ~/screenlogs/logs/capture_error.log
+StandardOutput=null
+StandardError=journal

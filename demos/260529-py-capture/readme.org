@@ -1,0 +1,49 @@
+#+title: screen-capture quick start
+#+date: 2026-05-30
+
+* 部署
+
+#+begin_src sh
+./setup.sh
+#+end_src
+
+若需要 Ollama 关键字提取（可选）：
+#+begin_src sh
+sudo systemctl enable --now ollama
+ollama pull qwen2.5:1.5b
+#+end_src
+
+* 配置
+
+编辑 =capturelib/config.py=：
+
+| 变量                  | 说明                                   |
+|-----------------------+----------------------------------------|
+| =ALLOWED_APP_CLASSES= | 前台窗口白名单，空 set 表示监控所有窗口 |
+| =SIMILARITY_THRESHOLD= | trigram 相似度阈值，越高越容易跳过重复 |
+| =OCR_LANG=            | tesseract 语言包，繁体改 =chi_tra+eng= |
+
+* 常用命令
+
+#+begin_src sh
+# 查看 timer 状态
+systemctl --user status screen-capture.timer
+
+# 查看运行日志
+journalctl --user -u screen-capture.service -f
+
+# 查看今天的屏幕记录
+cat ~/screenlogs/logs/$(date +%Y-%m-%d).txt
+
+# 停止
+systemctl --user disable --now screen-capture.timer
+#+end_src
+
+* 日志格式
+
+每条 entry 格式：
+#+begin_example
+[HH:MM:SS][app-class] 窗口标题
+<OCR 清洗后的文本>
+---
+#+end_example
