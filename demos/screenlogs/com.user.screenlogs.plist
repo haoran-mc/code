@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.screenlogs</string>
+
+    <!-- 每 30 秒执行一次 -->
+    <key>StartInterval</key>
+    <integer>30</integer>
+
+    <key>ProgramArguments</key>
+    <array>
+        <!-- setup.sh 会把这里替换为实际的 python3 路径 -->
+        <string>PYTHON3_PATH</string>
+        <string>CAPTURE_SCRIPT_PATH</string>
+    </array>
+
+    <!-- 登录后自动启动 -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- 崩溃后自动重启 -->
+    <key>KeepAlive</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/screenlogs_stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/screenlogs_stderr.log</string>
+</dict>
+</plist>
